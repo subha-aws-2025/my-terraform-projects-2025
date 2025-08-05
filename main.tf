@@ -144,7 +144,7 @@ resource "aws_instance" "my-example-2" {
     instance_type = var.myinstancetype
     subnet_id = aws_subnet.public_subnet_1.id
     vpc_security_group_ids = [aws_security_group.Project_AC.id]
-    user_data = base64encode(file("userdata.sh"))
+    user_data = base64encode(file("userdata1.sh"))
     iam_instance_profile = aws_iam_instance_profile.my-ec2-profile.id
     
 }
